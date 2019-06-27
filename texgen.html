@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		
+		<link rel="icon" type="image/png" href="/img/favicon.png">
+		
+		<title>GSOM Texgen</title>
+		
+		<link rel="stylesheet" href="/css/texgen.css">
+		<link rel="stylesheet" href="/lib/github-ribbons-css/ribbons.css">
+		<link rel="stylesheet" href="/lib/jquery-ui/jquery-ui.theme.min.css">
+		
+		<script src="/node_modules/jquery/dist/jquery.min.js"></script>
+		<script src="/node_modules/ace-builds/src-min-noconflict/ace.js"></script>
+		<script src="/node_modules/ace-builds/src-min-noconflict/ext-language_tools.js"></script>
+		<script src="/node_modules/three/build/three.min.js"></script>
+		<script src="/node_modules/three/examples/js/controls/OrbitControls.js"></script>
+		<script src="/node_modules/texgen-raub/index.js"></script>
+		<script src="/node_modules/texgen-raub/examples.js"></script>
+		
+		<script src="/lib/jquery-ui/jquery-ui.min.js"></script>
+		
+		<script src="/js/texgen/main.js"></script>
+		
+	</head>
+	<body class="editor-float">
+		<div class="js-ui-overlay code-window js-draggable js-code-window">
+			<div class="code-toolbar">
+				<div
+					class="toolbar-button side-toggler js-side-toggler"
+					title="Switch editor side"
+				>
+					<div class="decor decor1"></div>
+					<div class="decor decor2"></div>
+				</div>
+				<div
+					class="toolbar-button download-button js-download-button"
+					title="Download as PNG"
+				>
+					<div class="decor decor1"></div>
+					<div class="decor decor2"></div>
+					<div class="decor decor3"></div>
+				</div>
+				<div
+					class="toolbar-button help-toggler js-help-toggler"
+					title="Toggle help text"
+				>
+					?
+				</div>
+				<div
+					class="toolbar-button preset-toggler js-preset-toggler"
+					title="Preset list"
+				>
+					<div class="plist plist1"></div>
+					<div class="plist plist2"></div>
+					<div class="plist plist3"></div>
+				</div>
+				<div
+					class="toolbar-button theme-toggler dark-mode js-theme-toggler"
+					title="Switch light/dark theme"
+				>
+					<div class="sample">A</div>
+				</div>
+				<div
+					class="toolbar-button offset-toggler js-offset-toggler cell-mode"
+					title="Move seamless planes"
+				>
+					<div class="grid grid1"></div>
+					<div class="grid grid2"></div>
+					<div class="grid grid3"></div>
+					<div class="grid grid4"></div>
+					<div class="cell"></div>
+				</div>
+			</div>
+			<pre class="code-text" id="editor"></pre>
+		</div>
+		<div
+			class="js-ui-overlay code-window help-window js-help-window js-draggable"
+			style="display: none;"
+		>
+			<div class="code-toolbar">
+				<div
+					class="toolbar-button help-toggler dark-mode js-help-toggler"
+					title="Hide help text"
+				>
+					X
+				</div>
+			</div>
+			<div class="code-text">
+				<p><span class="code-bit">void main() {}</span> Required procedure</p>
+				<p><span class="code-bit">vec4 gl_FragColor</span> Output pixel color</p>
+				<p><span class="code-bit">vec2 varUv</span> varying UV coord [0; 1]</p>
+				<p>
+					<span class="code-bit">vec3 getUv3(vec2)</span>
+					3D seamless noise coord
+				</p>
+				<p>
+					<span class="code-bit">sampler2D _grain</span>
+					convenience grain texture
+				</p>
+				<p>
+					<span class="code-bit">float noise(vec3)</span>
+					coherent noise generator
+				</p>
+				<p>
+					<span class="code-bit">float getSign(float)</span>
+					-1 for negative, +1 otherwise
+				</p>
+				<p><span class="code-bit">M_PI = 3.141592653</span></p>
+				<p><span class="code-bit">M_2PI = 2.0 * M_PI</span></p>
+				<p><span class="code-bit">M_PI2 = 0.5 * M_PI</span></p>
+			</div>
+		</div>
+		<div class="js-ui-overlay preset-list js-preset-list" style="display: none;">
+			<ul></ul>
+		</div>
+		<div class="js-ribbon ribbon green right" style="z-index: 1;">
+			<a href="https://github.com/node-3d/texgen-raub" target="_blank">See GitHub</a>
+		</div>
+		<script>window.texgen.init();</script>
+	</body>
+</html>

@@ -1,0 +1,9 @@
+html, body { margin: 0px; padding: 0px; overflow: hidden; }
+
+.folder .dg .perf-line {
+	height: 47px;
+}
+
+.folder .dg .closed .perf-line {
+	height: 0px;
+}

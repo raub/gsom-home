@@ -1,0 +1,30 @@
+{
+	"author": "Luis Blanco <luisblanco1337@gmail.com>",
+	"name": "gsom-home",
+	"version": "0.0.1",
+	"description": "GSOM Home Page",
+	"private": true,
+	"main": "index.js",
+	"scripts": {
+		"start": "static-server"
+	},
+	"keywords": [
+		"gsom"
+	],
+	"engines": {
+		"node": ">=10.15.3",
+		"npm": ">=6.4.1"
+	},
+	"repository": {
+		"type": "git",
+		"url": "https://gitlab.com/raubtierxxx/gsom-home.git"
+	},
+	"dependencies": {
+		"three": "0.105.2",
+		"texgen-raub": "0.0.8",
+		"geogen-raub": "0.0.3",
+		"dat.gui": "0.7.6",
+		"jquery": "3.4.0",
+		"ace-builds": "1.4.4"
+	}
+}
