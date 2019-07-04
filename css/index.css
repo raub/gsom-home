@@ -1,3 +1,8 @@
+@font-face {
+	font-family: Xirod;
+	src: url(/font/xirod.otf);
+}
+
 html, body { margin: 0px; padding: 0px; overflow: hidden; }
 
 .gsom-screen {
@@ -9,29 +14,47 @@ html, body { margin: 0px; padding: 0px; overflow: hidden; }
 	background-color: rgba(18, 33, 38, 0.93);
 }
 
-
 .gsom-panel {
 	width: 90vw;
 	height: 90vh;
 	position: absolute;
 	left: 5vw;
 	top: 5vh;
-	color: #fff;
-	font-weight: 800;
-	font-family: sans-serif;
-	overflow: hidden;
-}
-
-.gsom-panel-rel {
-	width: 100%;
-	height: 100%;
-	position: relative;
+	color: #fafafa;
+	font-weight: 600;
+	font-family: Xirod;
+	letter-spacing: 1px;
+	background-color: rgba(0, 0, 0, 0.15);
 }
 
 .gsom-panel-container {
+	width: 100%;
+	height: 100%;
+	position: relative;
 	display: flex;
 	align-items: flex-start;
 	flex-wrap: nowrap;
+	flex-direction: column;
+}
+
+.gsom-panel-row {
+	width: 100%;
+	position: relative;
+	display: block;
+}
+
+.gsom-panel-header,
+.gsom-panel-footer {
+	
+}
+
+.gsom-panel-body {
+	display: flex;
+	align-items: flex-start;
+	flex-wrap: nowrap;
+	flex-direction: row;
+	flex-grow: 1;
+	background: linear-gradient(90deg, rgba(25, 68, 75, 0.7) 0px, rgba(25, 68, 75, 0) 6px, rgba(25, 68, 75, 0) calc(100% - 6px), rgba(25, 68, 75, 0.7) 100%);
 }
 
 .gsom-panel-back-shadow {
@@ -41,25 +64,30 @@ html, body { margin: 0px; padding: 0px; overflow: hidden; }
 	box-shadow: inset 0px 0px 8px 2px rgba(29,69,77,1);
 }
 
-.gsom-panel-back-outer {
-	transform: rotate(45deg);
-	overflow: hidden;
-	position: absolute;
-	left: 0;
-	top: 0;
-	width: 100%;
-	height: 100%;
+.gsom-panel-tabs {
+	display: flex;
+	align-items: flex-start;
+	flex-wrap: nowrap;
+	flex-direction: row;
 }
 
-.gsom-panel-back-inner {
-	position: absolute;
-	transform: rotate(-45deg);
-	left: 0;
-	top: 0;
-	width: 100%;
-	height: 100%;
+.gsom-panel-tab {
+	padding: 1rem;
+	display: inline-block;
+	position: relative;
+	font-size: 0.5rem;
+	width: 155px;
+	text-align: center;
+	background-color: rgba(22, 32, 42, 0.5);
+	border: 1px solid #212c30;
 }
 
+.gsom-panel-tab:hover {
+	border-color: #39b5b5;
+	-webkit-box-shadow: inset 0px 0px 3px 1px rgba(89,177,178,1), 0px 0px 3px 1px rgba(89,177,178,1);
+	-moz-box-shadow: inset 0px 0px 3px 1px rgba(89,177,178,1), 0px 0px 3px 1px rgba(89,177,178,1);
+	box-shadow: inset 0px 0px 3px 1px rgba(89,177,178,1), 0px 0px 3px 1px rgba(89,177,178,1);
+}
 
 .gsom-button {
 	padding: 1rem;
