@@ -43,9 +43,109 @@ html, body { margin: 0px; padding: 0px; overflow: hidden; }
 	display: block;
 }
 
-.gsom-panel-header,
+.gsom-panel-header {
+	
+}
+
 .gsom-panel-footer {
 	
+}
+
+.gsom-panel-footer1 {
+	display: flex;
+	align-items: flex-start;
+	flex-wrap: nowrap;
+	flex-direction: row;
+	height: 58px;
+}
+.gsom-panel-footer1-1 {
+	width: 50px;
+	height: 100%;
+	flex-grow: 0;
+	position: relative;
+	background: linear-gradient(40deg, rgba(25, 68, 75, 0) 43px, rgba(25, 68, 75, 0.7) 43.5px, rgba(25, 68, 75, 0) 49px);
+}
+.gsom-panel-footer1-1:after {
+	content: '';
+	position: absolute;
+	width: 20px;
+	height: 17px;
+	bottom: 15px;
+	left: 20px;
+	background: linear-gradient(-90deg, rgba(25, 68, 75, 0) calc(100% - 4px), rgba(25, 68, 75, 0.7) 100%),
+		linear-gradient(0deg, rgba(25, 68, 75, 0.7) 0px, rgba(25, 68, 75, 0) 4px),
+		linear-gradient(40deg, rgba(25, 68, 75, 0) 11px, rgba(25, 68, 75, 0.7) 14px, rgba(25, 68, 75, 0) 14.5px);
+}
+
+.gsom-panel-footer1-2 {
+	flex-grow: 1;
+	height: 100%;
+	position: relative;
+	background: linear-gradient(0deg, rgba(25, 68, 75, 0) 15px, rgba(25, 68, 75, 0.7) 15px, rgba(25, 68, 75, 0) 21px)
+}
+.gsom-panel-footer1-2-1 {
+	transform: skew(45deg);
+	position: absolute;
+	width: 40%;
+	height: 11px;
+	bottom: 0px;
+	right: 0px;
+	background: linear-gradient(90deg, rgba(25, 68, 75, 0) calc(100% - 6px), rgba(25, 68, 75, 0.7) 100%),
+		linear-gradient(0deg, rgba(25, 68, 75, 0.7) 0px, rgba(25, 68, 75, 0) 6px),
+		linear-gradient(180deg, rgba(25, 68, 75, 0.7) 0px, rgba(25, 68, 75, 0) 6px);
+}
+.gsom-panel-footer1-2-2 {
+	transform: skew(45deg);
+	position: absolute;
+	width: 8px;
+	height: 11px;
+	bottom: 0px;
+	right: calc(40% + 2px);
+	background: linear-gradient(0deg, rgba(25, 68, 75, 0.7) 0px, rgba(25, 68, 75, 0) 6px),
+		linear-gradient(180deg, rgba(25, 68, 75, 0.7) 0px, rgba(25, 68, 75, 0) 6px);
+}
+.gsom-panel-footer1-2-3 {
+	right: calc(40% + 12px);
+}
+.gsom-panel-footer1-2-4 {
+	right: calc(40% + 22px);
+}
+.gsom-panel-footer1-2-5 {
+	right: calc(40% + 32px);
+}
+.gsom-panel-footer1-2-6 {
+	right: calc(40% + 42px);
+}
+.gsom-panel-footer1-2-7 {
+	right: calc(40% + 52px);
+}
+.gsom-panel-footer1-2-8 {
+	right: calc(40% + 62px);
+	background: linear-gradient(0deg, rgba(25, 68, 75, 0.7) 0px, rgba(25, 68, 75, 0) 6px),
+		linear-gradient(180deg, rgba(25, 68, 75, 0.7) 0px, rgba(25, 68, 75, 0) 6px),
+		linear-gradient(90deg, rgba(25, 68, 75, 0.7) 0px, rgba(25, 68, 75, 0) 6px);
+}
+.gsom-panel-footer1-2-9 {
+	position: absolute;
+	height: 1px;
+	width: 100%;
+	bottom: 15px;
+	left: 0;
+	background: linear-gradient(90deg, rgba(255, 255, 255, 0) 10%, rgba(255, 255, 255, 0.5) 40%, rgba(255, 255, 255, 0.5) 60%, rgba(255, 255, 255, 0) 90%);
+}
+
+.gsom-panel-footer1-3 {
+	width: 15px;
+	height: 100%;
+	flex-grow: 0;
+	background: linear-gradient(45deg, rgba(25, 68, 75, 0) 10px, rgba(25, 68, 75, 0.7) 10px, rgba(25, 68, 75, 0) 16px);
+}
+.gsom-panel-footer1-4 {
+	flex-grow: 0;
+	height: 100%;
+	width: 20%;
+	background: linear-gradient(90deg, rgba(25, 68, 75, 0) calc(100% - 6px), rgba(25, 68, 75, 0.7) 100%),
+		linear-gradient(0deg, rgba(25, 68, 75, 0.7) 0px, rgba(25, 68, 75, 0) 6px);
 }
 
 .gsom-panel-body {
@@ -69,20 +169,46 @@ html, body { margin: 0px; padding: 0px; overflow: hidden; }
 	align-items: flex-start;
 	flex-wrap: nowrap;
 	flex-direction: row;
+	background: linear-gradient(90deg, rgba(25, 68, 75, 0.7) 0px, rgba(25, 68, 75, 0) 6px, rgba(25, 68, 75, 0) calc(100% - 6px), rgba(25, 68, 75, 0.7) 100%), linear-gradient(180deg, rgba(25, 68, 75, 0.7) 0px, rgba(25, 68, 75, 0) 6px);
+}
+
+.gsom-panel-tabs:after {
+	content: '';
+	position: absolute;
+	height: 1px;
+	width: 100%;
+	bottom: 0;
+	left: 0;
+	background: linear-gradient(90deg, rgba(255, 255, 255, 0.5) 0%, rgba(255, 255, 255, 0.5) 70%, rgba(255, 255, 255, 0) 90%, rgba(255, 255, 255, 0) 100%);
 }
 
 .gsom-panel-tab {
-	padding: 1rem;
+	cursor: pointer;
+	padding: 17px;
 	display: inline-block;
 	position: relative;
-	font-size: 0.5rem;
+	font-size: 10px;
 	width: 155px;
 	text-align: center;
 	background-color: rgba(22, 32, 42, 0.5);
 	border: 1px solid #212c30;
 }
+.gsom-panel-tab + .gsom-panel-tab {
+	margin-left: -1px;
+}
+
+.gsom-panel-tab:after {
+	content: '';
+	position: absolute;
+	height: 2px;
+	width: 100%;
+	top: 0;
+	left: 0;
+	background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0) 17%, rgba(255, 255, 255, 0.5) 35%, rgba(255, 255, 255, 0.5) 65%, rgba(255, 255, 255, 0) 83%, rgba(255, 255, 255, 0) 100%);
+}
 
 .gsom-panel-tab:hover {
+	z-index: 1;
 	border-color: #39b5b5;
 	-webkit-box-shadow: inset 0px 0px 3px 1px rgba(89,177,178,1), 0px 0px 3px 1px rgba(89,177,178,1);
 	-moz-box-shadow: inset 0px 0px 3px 1px rgba(89,177,178,1), 0px 0px 3px 1px rgba(89,177,178,1);
