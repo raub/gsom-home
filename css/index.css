@@ -3,6 +3,13 @@
 	src: url(/font/xirod.otf);
 }
 
+:root {
+	--grad-max-color: rgba(25, 68, 75, 0.7);
+	--grad-min-color: rgba(25, 68, 75, 0);
+}
+
+
+
 html, body { margin: 0px; padding: 0px; overflow: hidden; }
 
 .gsom-screen {
@@ -11,7 +18,7 @@ html, body { margin: 0px; padding: 0px; overflow: hidden; }
 	position: fixed;
 	left: 0;
 	top: 0;
-	background-color: rgba(18, 33, 38, 0.93);
+	background-color: rgba(0, 0, 0, 0.93);
 }
 
 .gsom-panel {
@@ -24,7 +31,7 @@ html, body { margin: 0px; padding: 0px; overflow: hidden; }
 	font-weight: 600;
 	font-family: Xirod;
 	letter-spacing: 1px;
-	background-color: rgba(0, 0, 0, 0.15);
+	/*background-color: rgba(0, 0, 0, 0.15);*/
 }
 
 .gsom-panel-container {
@@ -63,7 +70,7 @@ html, body { margin: 0px; padding: 0px; overflow: hidden; }
 	height: 100%;
 	flex-grow: 0;
 	position: relative;
-	background: linear-gradient(40deg, rgba(25, 68, 75, 0) 43px, rgba(25, 68, 75, 0.7) 43.5px, rgba(25, 68, 75, 0) 49px);
+	background: linear-gradient(40deg, var(--grad-min-color) 43px, var(--grad-max-color) 43.5px, var(--grad-min-color) 49px);
 }
 .gsom-panel-footer1-1:after {
 	content: '';
@@ -72,16 +79,16 @@ html, body { margin: 0px; padding: 0px; overflow: hidden; }
 	height: 17px;
 	bottom: 15px;
 	left: 20px;
-	background: linear-gradient(-90deg, rgba(25, 68, 75, 0) calc(100% - 4px), rgba(25, 68, 75, 0.7) 100%),
-		linear-gradient(0deg, rgba(25, 68, 75, 0.7) 0px, rgba(25, 68, 75, 0) 4px),
-		linear-gradient(40deg, rgba(25, 68, 75, 0) 11px, rgba(25, 68, 75, 0.7) 14px, rgba(25, 68, 75, 0) 14.5px);
+	background: linear-gradient(-90deg, var(--grad-min-color) calc(100% - 4px), var(--grad-max-color) 100%),
+		linear-gradient(0deg, var(--grad-max-color) 0px, var(--grad-min-color) 4px),
+		linear-gradient(40deg, var(--grad-min-color) 11px, var(--grad-max-color) 14px, var(--grad-min-color) 14.5px);
 }
 
 .gsom-panel-footer1-2 {
 	flex-grow: 1;
 	height: 100%;
 	position: relative;
-	background: linear-gradient(0deg, rgba(25, 68, 75, 0) 15px, rgba(25, 68, 75, 0.7) 15px, rgba(25, 68, 75, 0) 21px)
+	background: linear-gradient(0deg, var(--grad-min-color) 15px, var(--grad-max-color) 15px, var(--grad-min-color) 21px)
 }
 .gsom-panel-footer1-2-1 {
 	transform: skew(45deg);
@@ -90,9 +97,9 @@ html, body { margin: 0px; padding: 0px; overflow: hidden; }
 	height: 11px;
 	bottom: 0px;
 	right: 0px;
-	background: linear-gradient(90deg, rgba(25, 68, 75, 0) calc(100% - 6px), rgba(25, 68, 75, 0.7) 100%),
-		linear-gradient(0deg, rgba(25, 68, 75, 0.7) 0px, rgba(25, 68, 75, 0) 6px),
-		linear-gradient(180deg, rgba(25, 68, 75, 0.7) 0px, rgba(25, 68, 75, 0) 6px);
+	background: linear-gradient(90deg, var(--grad-min-color) calc(100% - 6px), var(--grad-max-color) 100%),
+		linear-gradient(0deg, var(--grad-max-color) 0px, var(--grad-min-color) 6px),
+		linear-gradient(180deg, var(--grad-max-color) 0px, var(--grad-min-color) 6px);
 }
 .gsom-panel-footer1-2-2 {
 	transform: skew(45deg);
@@ -101,8 +108,8 @@ html, body { margin: 0px; padding: 0px; overflow: hidden; }
 	height: 11px;
 	bottom: 0px;
 	right: calc(40% + 2px);
-	background: linear-gradient(0deg, rgba(25, 68, 75, 0.7) 0px, rgba(25, 68, 75, 0) 6px),
-		linear-gradient(180deg, rgba(25, 68, 75, 0.7) 0px, rgba(25, 68, 75, 0) 6px);
+	background: linear-gradient(0deg, var(--grad-max-color) 0px, var(--grad-min-color) 6px),
+		linear-gradient(180deg, var(--grad-max-color) 0px, var(--grad-min-color) 6px);
 }
 .gsom-panel-footer1-2-3 {
 	right: calc(40% + 12px);
@@ -121,9 +128,9 @@ html, body { margin: 0px; padding: 0px; overflow: hidden; }
 }
 .gsom-panel-footer1-2-8 {
 	right: calc(40% + 62px);
-	background: linear-gradient(0deg, rgba(25, 68, 75, 0.7) 0px, rgba(25, 68, 75, 0) 6px),
-		linear-gradient(180deg, rgba(25, 68, 75, 0.7) 0px, rgba(25, 68, 75, 0) 6px),
-		linear-gradient(90deg, rgba(25, 68, 75, 0.7) 0px, rgba(25, 68, 75, 0) 6px);
+	background: linear-gradient(0deg, var(--grad-max-color) 0px, var(--grad-min-color) 6px),
+		linear-gradient(180deg, var(--grad-max-color) 0px, var(--grad-min-color) 6px),
+		linear-gradient(90deg, var(--grad-max-color) 0px, var(--grad-min-color) 6px);
 }
 .gsom-panel-footer1-2-9 {
 	position: absolute;
@@ -138,14 +145,14 @@ html, body { margin: 0px; padding: 0px; overflow: hidden; }
 	width: 15px;
 	height: 100%;
 	flex-grow: 0;
-	background: linear-gradient(45deg, rgba(25, 68, 75, 0) 10px, rgba(25, 68, 75, 0.7) 10px, rgba(25, 68, 75, 0) 16px);
+	background: linear-gradient(45deg, var(--grad-min-color) 10px, var(--grad-max-color) 10px, var(--grad-min-color) 16px);
 }
 .gsom-panel-footer1-4 {
 	flex-grow: 0;
 	height: 100%;
 	width: 20%;
-	background: linear-gradient(90deg, rgba(25, 68, 75, 0) calc(100% - 6px), rgba(25, 68, 75, 0.7) 100%),
-		linear-gradient(0deg, rgba(25, 68, 75, 0.7) 0px, rgba(25, 68, 75, 0) 6px);
+	background: linear-gradient(90deg, var(--grad-min-color) calc(100% - 6px), var(--grad-max-color) 100%),
+		linear-gradient(0deg, var(--grad-max-color) 0px, var(--grad-min-color) 6px);
 }
 
 .gsom-panel-body {
@@ -154,7 +161,16 @@ html, body { margin: 0px; padding: 0px; overflow: hidden; }
 	flex-wrap: nowrap;
 	flex-direction: row;
 	flex-grow: 1;
-	background: linear-gradient(90deg, rgba(25, 68, 75, 0.7) 0px, rgba(25, 68, 75, 0) 6px, rgba(25, 68, 75, 0) calc(100% - 6px), rgba(25, 68, 75, 0.7) 100%);
+	background: linear-gradient(90deg, var(--grad-max-color) 0px, var(--grad-min-color) 6px, var(--grad-min-color) calc(100% - 6px), var(--grad-max-color) 100%);
+}
+.gsom-panel-tabs:after {
+	content: '';
+	position: absolute;
+	height: 1px;
+	width: 100%;
+	bottom: 0;
+	left: 0;
+	background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.5) 5%, rgba(255, 255, 255, 0.5) 70%, rgba(255, 255, 255, 0) 90%, rgba(255, 255, 255, 0) 100%);
 }
 
 .gsom-panel-back-shadow {
@@ -169,7 +185,7 @@ html, body { margin: 0px; padding: 0px; overflow: hidden; }
 	align-items: flex-start;
 	flex-wrap: nowrap;
 	flex-direction: row;
-	background: linear-gradient(90deg, rgba(25, 68, 75, 0.7) 0px, rgba(25, 68, 75, 0) 6px, rgba(25, 68, 75, 0) calc(100% - 6px), rgba(25, 68, 75, 0.7) 100%), linear-gradient(180deg, rgba(25, 68, 75, 0.7) 0px, rgba(25, 68, 75, 0) 6px);
+	background: linear-gradient(90deg, var(--grad-max-color) 0px, var(--grad-min-color) 6px, var(--grad-min-color) calc(100% - 6px), var(--grad-max-color) 100%), linear-gradient(180deg, var(--grad-max-color) 0px, var(--grad-min-color) 6px);
 }
 
 .gsom-panel-tabs:after {
@@ -179,7 +195,7 @@ html, body { margin: 0px; padding: 0px; overflow: hidden; }
 	width: 100%;
 	bottom: 0;
 	left: 0;
-	background: linear-gradient(90deg, rgba(255, 255, 255, 0.5) 0%, rgba(255, 255, 255, 0.5) 70%, rgba(255, 255, 255, 0) 90%, rgba(255, 255, 255, 0) 100%);
+	background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.5) 5%, rgba(255, 255, 255, 0.5) 70%, rgba(255, 255, 255, 0) 90%, rgba(255, 255, 255, 0) 100%);
 }
 
 .gsom-panel-tab {
